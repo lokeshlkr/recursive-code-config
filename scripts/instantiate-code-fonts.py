@@ -76,8 +76,8 @@ def setFontNameID(font, ID, newName):
 oldName = "Recursive"
 
 def splitFont(
-        outputDirectory=f"RecMono{fontOptions['Family Name']}".replace(" ",""),
-        newName="Rec Mono",
+        outputDirectory=f"{fontOptions['Family Name']}".replace(" ",""),
+        newName="",
 ):
 
     # access font as TTFont object
@@ -107,7 +107,7 @@ def splitFont(
         currentPsName = getFontNameID(instanceFont, 6)
         newPsName = (currentPsName\
             .replace("Sans", "")\
-            .replace(oldName,newName.replace(" ", "") + fontOptions['Family Name'].replace(" ",""))\
+            .replace(oldName,fontOptions['Family Name'].replace(" ",""))\
             .replace("LinearLight", instance.replace(" ", "")))
         setFontNameID(instanceFont, 6, newPsName)
 
@@ -115,7 +115,7 @@ def splitFont(
         currentFullName = getFontNameID(instanceFont, 4)
         newFullName = (currentFullName\
             .replace("Sans", "")\
-            .replace(oldName, newName + " " + fontOptions['Family Name'])\
+            .replace(oldName,fontOptions['Family Name'])\
             .replace(" Linear Light", instance))\
             .replace(" Regular", "")
         setFontNameID(instanceFont, 4, newFullName)
@@ -137,7 +137,7 @@ def splitFont(
         setFontNameID(instanceFont, 16, newFamName)
 
         newFileName = fontFileName\
-            .replace(oldName, (newName + fontOptions['Family Name']).replace(" ", ""))\
+            .replace(oldName, (fontOptions['Family Name']).replace(" ", ""))\
             .replace("_VF_", "-" + instance.replace(" ", "") + "-")
 
         # make dir for new fonts

@@ -20,7 +20,7 @@
 # Example: "Custom" will yield the family "Rec Mono Custom". 
 # Keep under 13 characters in length to avoid potential OS bugs.
 
-Family Name: Custom 
+Family Name: StrangerSans 
 
 # -----------------------------------------------------------------------------
 # Font Styles
@@ -37,38 +37,38 @@ Family Name: Custom
 Fonts:
 
   Regular:
-    MONO: 1
-    CASL: 0
-    wght: 425
+    MONO: 0
+    CASL: 0.7
+    wght: 450
     slnt: 0
     CRSV: 0
 
   Italic:
     MONO: 1
-    CASL: 1
-    wght: 425
+    CASL: 0.7
+    wght: 450
     slnt: -10
-    CRSV: 1
+    CRSV: 0
 
   Bold:
-    MONO: 1
-    CASL: 0
+    MONO: 0
+    CASL: 0.7
     wght: 750
     slnt: 0
     CRSV: 0
 
   Bold Italic:
-    MONO: 1
-    CASL: 1
+    MONO: 0
+    CASL: 0.7
     wght: 750
     slnt: -10
-    CRSV: 1
+    CRSV: 0
 
 # -----------------------------------------------------------------------------
 # Font Features
 
 # Freeze in code ligatures? True or False
-Code Ligatures: True
+Code Ligatures: False
 
 # Include font features to freeze in stylistic options. Copy them below to use. 
 # See README for details.
